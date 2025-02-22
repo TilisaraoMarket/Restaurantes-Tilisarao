@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Directorio de Restaurantes, Pizzerías y Bares</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #64748b;
+      --accent: #f59e0b;
+      --background: #f8fafc;
+      --text: #1e293b;
+      --white: #ffffff;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background-color: var(--white);
+      box-shadow: var(--shadow);
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      color: var(--primary);
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .intro-section {
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .intro-section h2 {
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+    }
+    .intro-section p {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .places-grid {
+      max-width: 1200px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+    .place-card {
+      background-color: var(--white);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .place-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .place-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .place-content {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .place-title {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .place-description {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+    .place-button {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    .place-button:hover {
+      background-color: var(--primary-dark);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: var(--text);
+      color: var(--white);
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      .intro-section h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Directorio de Restaurantes, Pizzerías y Bares</h1>
+  </header>
+
+  <section class="intro-section">
+    <h2>Encuentra los mejores lugares para comer y divertirte</h2>
+    <p>
+      Selecciona entre una gran variedad de opciones gastronómicas, desde
+      pizzerías y restaurantes especializados hasta bares de ambiente
+      único. ¡Hay un sitio para cada gusto!
+    </p>
+  </section>
+
+  <section class="places-grid">
+    <!-- Tarjeta #1: Restaurante -->
+    <div class="place-card">
+      <img
+        src="https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=800"
+        alt="Restaurante Gourmet Casa Sabores"
+        class="place-image"
+      />
+      <div class="place-content">
+        <h3 class="place-title">Casa Sabores</h3>
+        <p class="place-description">
+          Deliciosos platillos de comida tradicional y fusión internacional.
+          Ambiente elegante, ideal para celebraciones especiales.
+        </p>
+        <a href="https://example.com/casa-sabores" class="place-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta #2: Pizzería -->
+    <div class="place-card">
+      <img
+        src="https://images.pexels.com/photos/1580466/pexels-photo-1580466.jpeg?auto=compress&cs=tinysrgb&w=800"
+        alt="Pizzería La Rústica"
+        class="place-image"
+      />
+      <div class="place-content">
+        <h3 class="place-title">Pizzería La Rústica</h3>
+        <p class="place-description">
+          Pizzas artesanales al horno de leña, con masas de fermentación
+          larga y los mejores ingredientes frescos.
+        </p>
+        <a href="https://example.com/la-rustica" class="place-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta #3: Bar -->
+    <div class="place-card">
+      <img
+        src="https://images.pexels.com/photos/129747/pexels-photo-129747.jpeg?auto=compress&cs=tinysrgb&w=800"
+        alt="Bar Nocturno El Encuentro"
+        class="place-image"
+      />
+      <div class="place-content">
+        <h3 class="place-title">Bar El Encuentro</h3>
+        <p class="place-description">
+          Ambiente relajado para disfrutar de buena música,
+          coctelería de autor y platillos para picar.
+        </p>
+        <a href="https://example.com/el-encuentro" class="place-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta #4: Restaurante -->
+    <div class="place-card">
+      <img
+        src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=800"
+        alt="Restaurante Fusión Oriental"
+        class="place-image"
+      />
+      <div class="place-content">
+        <h3 class="place-title">Fusión Oriental</h3>
+        <p class="place-description">
+          Sabores asiáticos con toques modernos. Disfruta de sushi,
+          ramen y platos exclusivos con frescura garantizada.
+        </p>
+        <a href="https://example.com/fusion-oriental" class="place-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta #5: Pizzería -->
+    <div class="place-card">
+      <img
+        src="https://images.pexels.com/photos/7242161/pexels-photo-7242161.jpeg?auto=compress&cs=tinysrgb&w=800"
+        alt="Pizzería Don Grano"
+        class="place-image"
+      />
+      <div class="place-content">
+        <h3 class="place-title">Pizzería Don Grano</h3>
+        <p class="place-description">
+          Especialistas en pizza napolitana, con masa suave y
+          esponjosa, combinaciones clásicas y gourmet.
+        </p>
+        <a href="https://example.com/don-grano" class="place-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta #5: Rotiseria Burghini -->
+    <div class="place-card">
+      <img
+        src="Rotiseria.jpg"
+        alt="Pizzería Don Grano"
+        class="place-image"
+      />
+      <div class="place-content">
+        <h3 class="place-title">Rotiseria Burghini</h3>
+        <p class="place-description">
+          "Ubicada en el corazón de Tilisarao, Rotiseria Burghini te invita a descubrir el inconfundible sabor de la pizza napolitana con masa artesanal y salsas frescas. Disfruta de su ambiente familiar y de un menú que combina recetas clásicas con creaciones gourmet, pensadas para cautivar tanto a los amantes de la tradición como a quienes buscan nuevas experiencias culinarias."
+        </p>
+        <a href="https://tilisaraomarket.github.io/Rotiseria-Burghini/" class="place-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta #6: Bar -->
+    <div class="place-card">
+      <img
+        src="https://images.pexels.com/photos/336948/pexels-photo-336948.jpeg?auto=compress&cs=tinysrgb&w=800"
+        alt="Bar La Noche"
+        class="place-image"
+      />
+      <div class="place-content">
+        <h3 class="place-title">Bar La Noche</h3>
+        <p class="place-description">
+          Ambiente cosmopolita con DJ en vivo los fines de semana.
+          Amplia variedad de tragos y cervezas artesanales.
+        </p>
+        <a href="https://example.com/bar-la-noche" class="place-button">
+          Visitar Sitio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Directorio de Restaurantes, Pizzerías y Bares. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+</qodoArtifact>
